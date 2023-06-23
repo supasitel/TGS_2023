@@ -10,6 +10,8 @@
  */
 
 #include "game.h"
+#include "game_object/game_object.h"
+#include "game_manager/scene_manager/scene_manager.h"
 
 const unsigned int  CGame::m_clear_color = 0xff808080;
 
@@ -29,6 +31,9 @@ void
 CGame::
 Initialize(void)
 {
+    aqua::CreateGameObject<CSceneManager>(this);
+
+    IGameObject::Initialize();
 }
 
 /*
