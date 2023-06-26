@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game\game.cpp" />
-    <ClCompile Include="src\game\game_manager\Player\player.cpp" />
+    <ClCompile Include="src\game\game_manager\enemy\enemy.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\result_scene\result_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\scene.cpp" />
@@ -110,7 +110,7 @@
   <ItemGroup>
     <ClInclude Include="src\game\game.h" />
     <ClInclude Include="src\game\game_manager\game_manager.h" />
-    <ClInclude Include="src\game\game_manager\Player\player.h" />
+    <ClInclude Include="src\game\game_manager\enemy\enemy.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\result_scene\result_scene.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\scene.h" />

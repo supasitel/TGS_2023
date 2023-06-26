@@ -123,8 +123,7 @@ void CSceneManager::Create(SCENE_ID id)
 	switch (id)
 	{
 	case SCENE_ID::TITLE:		scene = aqua::CreateGameObject<CTitleScene>(this); break;
-	//case SCENE_ID::GAME_MEIN:	scene = aqua::CreateGameObject<CGameScene>(this); break;
-	//case SCENE_ID::RESULT:		scene = aqua::CreateGameObject<CResultScene>(this); break;
+	case SCENE_ID::GAMEMAIN:    scene = aqua::CreateGameObject<CMainScene>(this); break;
 	}
 
 	AQUA_ASSERT(scene, "ÉVÅ[ÉìÇ™ê∂ê¨Ç≈Ç´Ç‹ÇπÇÒÇ≈ÇµÇΩÅB");

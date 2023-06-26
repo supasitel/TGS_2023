@@ -1,14 +1,14 @@
 #pragma once
 #include "aqua.h"
 
-class CPlayer :public aqua::IGameObject
+class CEnemy :public aqua::IGameObject
 {
 public:
 	//コンストラクタ
-	CPlayer(aqua::IGameObject* parent);
+	CEnemy(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CPlayer() = default;
+	~CEnemy() = default;
 
 	//初期化
 	void Initialize(void);
@@ -25,5 +25,5 @@ private:
 	static const int m_width;	//幅
 	static const int m_height;	//高さ
 
-	aqua::CSprite	m_Player;	//プレイヤー
+	aqua::CSprite	m_Enemy;	//エネミー
 };
