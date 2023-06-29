@@ -1,7 +1,5 @@
 #include "main_scene.h"
-#include "../../../enemy/enemy.h"
-#include "../../../target/target.h"
-
+#include "../../../game_manager.h"
 
 //コンストラクタ
 CMainScene::CMainScene(aqua::IGameObject* parent)
@@ -12,12 +10,16 @@ CMainScene::CMainScene(aqua::IGameObject* parent)
 //初期化
 void CMainScene::Initialize(void)
 {
-	CTarget* target = aqua::CreateGameObject<CTarget>(this);
+	(CTarget*)aqua::CreateGameObject<CTarget>(this);
+	(CEnemy*)aqua::CreateGameObject<CEnemy>(this);
+
+	IGameObject::Initialize();
 }
 
 //更新
 void CMainScene::Update(void)
 {
+	IGameObject::Update();
 }
 
 //描画

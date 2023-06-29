@@ -1,7 +1,7 @@
 #include "target.h"
 
-const int CTarget::m_width = 264;
-const int CTarget::m_height = 300;
+const int CTarget::m_width = 264;	//幅
+const int CTarget::m_height = 300;	//高さ
 
 //コンストラクタ
 CTarget::CTarget(aqua::IGameObject* parent)

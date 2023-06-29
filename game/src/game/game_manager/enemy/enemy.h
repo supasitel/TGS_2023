@@ -21,6 +21,9 @@ public:
 
 	//‰ğ•ú
 	void Finalize(void);
+
+	//€–S
+	void Dead(void);
 private:
 	static const int m_width;	//•
 	static const int m_height;	//‚‚³

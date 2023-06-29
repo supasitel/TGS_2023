@@ -19,7 +19,7 @@ void CTitleScene::Update(void)
 
 	if (Trigger(KEY_ID::SPACE))
 	{
-		Change(SCENE_ID::GAMEMAIN);
+		Change(SCENE_ID::MAIN);
 	}
 }
 

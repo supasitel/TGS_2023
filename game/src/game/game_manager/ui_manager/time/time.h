@@ -1,14 +1,14 @@
 #pragma once
 #include "aqua.h"
 
-class CTarget :public aqua::IGameObject
+class CTime :public aqua::IGameObject
 {
 public:
 	//コンストラクタ
-	CTarget(aqua::IGameObject* parent);
+	CTime(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CTarget() = default;
+	~CTime() = default;
 
 	//初期化
 	void Initialize(void)override;
@@ -22,8 +22,5 @@ public:
 	//解放
 	void Finalize(void)override;
 private:
-	static const int m_width;	//ターゲット幅
-	static const int m_height;	//ターゲット高さ
-
-	aqua::CSprite	m_Target;	//ターゲット
+	aqua::CTimer	m_Time;
 };
