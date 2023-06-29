@@ -1,5 +1,7 @@
 #include "main_scene.h"
 #include "../../../enemy/enemy.h"
+#include "../../../target/target.h"
+
 
 //コンストラクタ
 CMainScene::CMainScene(aqua::IGameObject* parent)
@@ -10,10 +12,7 @@ CMainScene::CMainScene(aqua::IGameObject* parent)
 //初期化
 void CMainScene::Initialize(void)
 {
-	m_GBackGround.Create("data\\magic_circle.png");
-	m_GBackGround.position = aqua::CVector2::ZERO;
-
-	CEnemy* enemy = (CEnemy*)aqua::CreateGameObject<CEnemy>(this);
+	CTarget* target = aqua::CreateGameObject<CTarget>(this);
 }
 
 //更新
@@ -24,11 +23,11 @@ void CMainScene::Update(void)
 //描画
 void CMainScene::Draw(void)
 {
-	m_GBackGround.Draw();
+	IGameObject::Draw();
 }
 
 //解放
 void CMainScene::Finalize(void)
 {
-	m_GBackGround.Delete();
+	IGameObject::Finalize();
 }

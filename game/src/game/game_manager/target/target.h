@@ -1,15 +1,14 @@
 #pragma once
 #include "aqua.h"
-#include "../scene.h"
 
-class CMainScene :public IScene
+class CTarget :public aqua::IGameObject
 {
 public:
 	//コンストラクタ
-	CMainScene(aqua::IGameObject* parent);
+	CTarget(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CMainScene() = default;
+	~CTarget() = default;
 
 	//初期化
 	void Initialize(void)override;
@@ -26,5 +25,5 @@ private:
 	static const int m_width;
 	static const int m_height;
 
-	aqua::CSprite	m_GBackGround;	//背景
+	aqua::CSprite	m_Target;
 };
