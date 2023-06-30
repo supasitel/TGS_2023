@@ -1,6 +1,6 @@
 #include "enemy.h"
 
-const int CEnemy::m_width = 64;		//幅
+const int CEnemy::m_width = 64;		//幅	
 const int CEnemy::m_height = 64;	//高さ
 
 //コンストラクタ
@@ -12,6 +12,7 @@ CEnemy::CEnemy(aqua::IGameObject* parent)
 //初期化
 void CEnemy::Initialize(void)
 {
+	//エネミー
 	m_Enemy.Create("data\\abe.png");
 	m_Enemy.position = aqua::CVector2::ZERO;
 }

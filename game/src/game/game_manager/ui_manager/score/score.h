@@ -21,6 +21,15 @@ public:
 
 	//解放
 	void Finalize(void)override;
+
+	//スコアの加算
+	void Add(int score);
+
+	//スコアのクリア
+	void Clear(void);
+
+	//スコアの取得
+	int GetScore(void)const;
 private:
 	static const int m_max_score;	//最大スコア
 	static const int m_min_score;	//最少スコア
