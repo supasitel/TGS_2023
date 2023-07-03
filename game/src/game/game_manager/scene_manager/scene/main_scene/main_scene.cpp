@@ -12,6 +12,8 @@ void CMainScene::Initialize(void)
 {
 	(CTarget*)aqua::CreateGameObject<CTarget>(this);
 	(CEnemy*)aqua::CreateGameObject<CEnemy>(this);
+	(CScore*)aqua::CreateGameObject<CScore>(this);
+	(CTime*)aqua::CreateGameObject<CTime>(this);
 
 	IGameObject::Initialize();
 }

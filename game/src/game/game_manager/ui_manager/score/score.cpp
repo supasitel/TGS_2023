@@ -5,7 +5,7 @@ const int CScore::m_min_score = 0;		//最少スコア
 
 //コンストラクタ
 CScore::CScore(aqua::IGameObject* parent)
-	:aqua::IGameObject(parent, "Score")
+	:IUIManager(parent, "Score")
 	,m_Score(0)
 {
 }
@@ -15,6 +15,8 @@ void CScore::Initialize(void)
 {
 	//スコアラベル生成
 	m_ScoreLabel.Create(36, 2);
+
+	IUIManager::Initialize();
 }
 
 //更新

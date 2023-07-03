@@ -1,7 +1,8 @@
 #pragma once
 #include "aqua.h"
+#include "../ui_manager.h"
 
-class CScore :public aqua::IGameObject
+class CScore :public IUIManager
 {
 public:
 	//コンストラクタ
