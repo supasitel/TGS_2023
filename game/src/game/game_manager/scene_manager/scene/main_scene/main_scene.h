@@ -23,8 +23,9 @@ public:
 	//‰ğ•ú
 	void Finalize(void)override;
 private:
-	static const int m_width;
-	static const int m_height;
+	static const int m_width;	//•
+	static const int m_height;	//‚‚³
 
 	aqua::CSprite	m_GBackGround;	//”wŒi
+
 };

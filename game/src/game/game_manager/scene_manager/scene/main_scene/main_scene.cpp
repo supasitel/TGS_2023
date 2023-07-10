@@ -10,9 +10,9 @@ CMainScene::CMainScene(aqua::IGameObject* parent)
 //èâä˙âª
 void CMainScene::Initialize(void)
 {
-	(CTarget*)aqua::CreateGameObject<CTarget>(this);
-	(CScore*)aqua::CreateGameObject<CScore>(this);
-	(CTime*)aqua::CreateGameObject<CTime>(this);
+	aqua::CreateGameObject<CScore>(this);
+	aqua::CreateGameObject<CTime>(this);
+	aqua::CreateGameObject<CEnemy>(this);
 
 	IGameObject::Initialize();
 }
