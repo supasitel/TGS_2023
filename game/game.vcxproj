@@ -99,13 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game\game.cpp" />
-    <ClCompile Include="src\game\game_manager\target_manager\target\target.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\result_scene\result_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\title_scene\title_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene_manager.cpp" />
-    <ClCompile Include="src\game\game_manager\target_manager\target\target1\target1.cpp" />
+    <ClCompile Include="src\game\game_manager\target\current_target\current_target.cpp" />
+    <ClCompile Include="src\game\game_manager\target\wrong_target\wrong_target.cpp" />
     <ClCompile Include="src\game\game_manager\ui_manager\score\score.cpp" />
     <ClCompile Include="src\game\game_manager\ui_manager\time\time.cpp" />
     <ClCompile Include="src\game\game_manager\ui_manager\ui_manager.cpp" />
@@ -113,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\game.h" />
-    <ClInclude Include="src\game\game_manager\target_manager\target\target.h" />
     <ClInclude Include="src\game\game_manager\game_manager.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\result_scene\result_scene.h" />
@@ -121,8 +120,8 @@
     <ClInclude Include="src\game\game_manager\scene_manager\scene\scene_id.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\title_scene\title_scene.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene_manager.h" />
-    <ClInclude Include="src\game\game_manager\target_manager\target\target1\target1.h" />
-    <ClInclude Include="src\game\game_manager\target_manager\target\target_id.h" />
+    <ClInclude Include="src\game\game_manager\target\current_target\current_target.h" />
+    <ClInclude Include="src\game\game_manager\target\wrong_target\wrong_target.h" />
     <ClInclude Include="src\game\game_manager\ui_manager\score\score.h" />
     <ClInclude Include="src\game\game_manager\ui_manager\time\time.h" />
     <ClInclude Include="src\game\game_manager\ui_manager\ui_manager.h" />

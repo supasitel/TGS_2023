@@ -1,5 +1,4 @@
 #pragma once
-#include "target/target.h"
 #include "ui_manager/score/score.h"
 #include "ui_manager/time/time.h"
-#include "enemy/enemy.h"
+#include "target/wrong_target/wrong_target.h"
