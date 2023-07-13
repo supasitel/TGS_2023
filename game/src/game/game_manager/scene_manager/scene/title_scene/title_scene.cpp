@@ -9,7 +9,6 @@ CTitleScene::CTitleScene(aqua::IGameObject* parent)
 //‰Šú‰»
 void CTitleScene::Initialize(void)
 {
-	m_BackGround.Create("data\\magic_circle.png");
 }
 
 //XV
@@ -26,11 +25,9 @@ void CTitleScene::Update(void)
 //•`‰æ
 void CTitleScene::Draw(void)
 {
-	m_BackGround.Draw();
 }
 
 //‰ğ•ú
 void CTitleScene::Finalize(void)
 {
-	m_BackGround.Delete();
 }

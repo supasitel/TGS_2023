@@ -13,6 +13,7 @@ void CMainScene::Initialize(void)
 	aqua::CreateGameObject<CScore>(this);
 	aqua::CreateGameObject<CTime>(this);
 	aqua::CreateGameObject<CWrongTarget>(this);
+	aqua::CreateGameObject<CCurrentTarget>(this);
 
 	IGameObject::Initialize();
 }

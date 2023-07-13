@@ -1,5 +1,6 @@
 #pragma once
 #include "aqua.h"
+#include "../../scene_manager/scene/scene.h"
 
 class CCurrentTarget :public aqua::IGameObject
 {
@@ -25,11 +26,10 @@ private:
 	//色
 	void SetColor(const aqua::CColor&& color);
 
-	static const int				m_width;
-	static const int				m_height;
+	static const int				m_width;					//幅
+	static const int				m_height;					//高さ
 	static const unsigned int		m_clicked_color;			//クリック時の色
 	static const unsigned int		m_default_color;			//選択前の色
-	static const unsigned int		m_selected_color;			//選択時の色
 
 	aqua::CSprite					m_CurrentTarget;
 };

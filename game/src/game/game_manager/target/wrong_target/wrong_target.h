@@ -1,5 +1,6 @@
 #pragma once
 #include "aqua.h"
+#include "../target.h"
 
 class CWrongTarget :public aqua::IGameObject
 {
@@ -27,7 +28,6 @@ private:
 
 	static const unsigned int		m_clicked_color;			//クリック時の色
 	static const unsigned int		m_default_color;			//選択前の色
-	static const unsigned int		m_selected_color;			//選択時の色
 	static const int				m_height;					//幅
 	static const int				m_width;					//高さ
 
