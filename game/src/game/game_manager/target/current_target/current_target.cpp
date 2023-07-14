@@ -24,27 +24,27 @@ void CCurrentTarget::Initialize(void)
 //更新
 void CCurrentTarget::Update(void)
 {
-	//aqua::mouseの省略
-	using namespace aqua::mouse;
+	////aqua::mouseの省略
+	//using namespace aqua::mouse;
 
-	aqua::CPoint mpos = GetCursorPos();
+	//aqua::CPoint mpos = GetCursorPos();
 
-	//ターゲット(正解)上にカーソルがない場合
-	if (mpos.x<m_CurrentTarget.position.x && mpos.x>m_CurrentTarget.position.x + m_width ||
-		mpos.y<m_CurrentTarget.position.y && mpos.y>m_CurrentTarget.position.y + m_height)
-	{
-		SetColor(m_default_color);
-		return;
-	}
-	//ターゲット(正解)上にカーソルがある場合
-	else
-	{
-		SetColor(m_default_color);
-		if (Trigger(BUTTON_ID::LEFT))
-		{
-			SetColor(m_clicked_color);
-		}
-	}
+	////ターゲット(正解)上にカーソルがない場合
+	//if (mpos.x<m_CurrentTarget.position.x && mpos.x>m_CurrentTarget.position.x + m_width ||
+	//	mpos.y<m_CurrentTarget.position.y && mpos.y>m_CurrentTarget.position.y + m_height)
+	//{
+	//	SetColor(m_default_color);
+	//	return;
+	//}
+	////ターゲット(正解)上にカーソルがある場合
+	//else
+	//{
+	//	SetColor(m_default_color);
+	//	if (Trigger(BUTTON_ID::LEFT))
+	//	{
+	//		SetColor(m_clicked_color);
+	//	}
+	//}
 }
 
 //描画

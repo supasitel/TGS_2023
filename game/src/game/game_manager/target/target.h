@@ -5,7 +5,7 @@ class ITarget :public aqua::IGameObject
 {
 public:
 	//コンストラクタ
-	ITarget(aqua::IGameObject* parent);
+	ITarget(aqua::IGameObject* parent,const std::string&name);
 
 	//デストラクタ
 	~ITarget() = default;

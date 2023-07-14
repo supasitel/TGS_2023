@@ -1,7 +1,7 @@
 #include "target.h"
 
 //コンストラクタ
-ITarget::ITarget(aqua::IGameObject* parent)
+ITarget::ITarget(aqua::IGameObject* parent, const std::string& name)
 	:aqua::IGameObject(parent, "Target")
 	, m_Width(0), m_Height(0), m_Radius(0.0f), m_Velocity(aqua::CVector2::ZERO)
 {
@@ -24,18 +24,18 @@ void ITarget::Update(void)
 
 	m_Position += m_Velocity * aqua::GetDeltaTime();
 
-	if (m_Position.x > mpos.x && m_Position.x < mpos.x + m_Width ||
-		m_Position.y > mpos.y && m_Position.x < mpos.y + m_Height)
-	{
-		return;
-	}
-	else
-	{
-		if (Trigger(BUTTON_ID::LEFT))
-		{
+	//if (m_Position.x > mpos.x && m_Position.x < mpos.x + m_Width ||
+	//	m_Position.y > mpos.y && m_Position.x < mpos.y + m_Height)
+	//{
+	//	return;
+	//}
+	//else
+	//{
+	//	if (Trigger(BUTTON_ID::LEFT))
+	//	{
 
-		}
-	}
+	//	}
+	//}
 
 	CheckHitWall();
 
@@ -44,6 +44,7 @@ void ITarget::Update(void)
 //描画
 void ITarget::Draw(void)
 {
+
 }
 
 //解放

@@ -2,7 +2,7 @@
 #include "aqua.h"
 #include "../target.h"
 
-class CWrongTarget :public aqua::IGameObject
+class CWrongTarget :public ITarget
 {
 public:
 	//コンストラクタ
@@ -29,7 +29,10 @@ private:
 	static const unsigned int		m_clicked_color;			//クリック時の色
 	static const unsigned int		m_default_color;			//選択前の色
 	static const int				m_height;					//幅
-	static const int				m_width;					//高さ
+	static const int 				m_width;					//高さ
+	static const float				m_radius;					//
+	static const float				m_max_velocity;				//
+	static const float				m_min_velocity;				//
 
 	aqua::CSprite					m_WrongTarget;				//ターゲット(間違い)
 };
