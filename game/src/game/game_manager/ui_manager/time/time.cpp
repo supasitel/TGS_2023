@@ -52,7 +52,7 @@ void CTime::Draw(void)
 	m_TimerLabel.text = "残り" + std::to_string(m_TimeLimit) + "秒";
 	
 	//タイマーラベル位置
-	m_TimerLabel.position = { 800.0f,0.0f };
+	m_TimerLabel.position = { 500.0f,0.0f };
 
 	m_TimerLabel.Draw();
 }

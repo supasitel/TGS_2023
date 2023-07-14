@@ -16,16 +16,11 @@ public:
 
 	//XV
 	void Update(void)override;
-
-	//•`‰æ
-	void Draw(void)override;
-
-	//‰ğ•ú
-	void Finalize(void)override;
 private:
-	static const int m_width;	//•
-	static const int m_height;	//‚‚³
-
-	aqua::CSprite	m_GBackGround;	//”wŒi
-
+	enum class STATE
+	{
+		START,
+		PLAY,
+	};
+	STATE	m_State;
 };

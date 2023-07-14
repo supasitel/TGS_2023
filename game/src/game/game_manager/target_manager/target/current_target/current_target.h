@@ -1,6 +1,5 @@
 #pragma once
 #include "aqua.h"
-#include "../../scene_manager/scene/scene.h"
 
 class CCurrentTarget :public aqua::IGameObject
 {
