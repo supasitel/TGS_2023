@@ -22,6 +22,8 @@ public:
 
 	//解放
 	void Finalize(void)override;
+
+	void CheckHitMouse(void);
 private:
 	static const std::string	m_name;		//名前
 	static const std::string	m_category;	//カテゴリー

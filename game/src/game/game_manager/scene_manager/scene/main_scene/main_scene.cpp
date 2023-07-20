@@ -1,20 +1,28 @@
 #include "main_scene.h"
-#include "../../../game_manager.h"
 #include "../../../unit_manager/unit_manager.h"
 
 //コンストラクタ
 CMainScene::CMainScene(aqua::IGameObject* parent)
-	:IScene(parent,"MainScene")
+	:IScene(parent, "MainScene")
 {
 }
 
 //初期化
 void CMainScene::Initialize(void)
 {
-	aqua::CreateGameObject<CUnitManager>(this);
+	CUnitManager* um = (CUnitManager*)aqua::CreateGameObject<CUnitManager>(this);
+
+	//ターゲットを10体生成
+	for (int i = 0; i < 10; ++i)
+	{
+		um->Create(CUnitManager::UNIT_ID::WRONG);
+	}
+
+	IGameObject::Initialize();
 }
 
 //更新
 void CMainScene::Update(void)
 {
+	IGameObject::Update();
 }

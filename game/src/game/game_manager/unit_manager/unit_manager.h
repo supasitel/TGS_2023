@@ -1,13 +1,21 @@
 #pragma once
 #include "aqua.h"
 #include "unit/unit.h"
-#include "unit/unit_id.h"
 
 class CUnitManager :public aqua::IGameObject
 {
 public:
+	//ユニットID
+	enum class UNIT_ID
+	{
+		CURRENT,
+		WRONG,
+
+		MAX
+	};
+
 	//コンストラクタ
-	CUnitManager(aqua::IGameObject* parent, const std::string& name);
+	CUnitManager(aqua::IGameObject* parent);
 
 	//デストラクタ
 	~CUnitManager() = default;

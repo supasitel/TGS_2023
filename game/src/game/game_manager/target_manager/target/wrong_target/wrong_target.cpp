@@ -44,12 +44,37 @@ void CWrongTarget::Initialize(void)
 
 //更新
 void CWrongTarget::Update(void)
-{
-	//壁判定
-	CheckHitWall();
-
+{	
+	CheckHitMouse();
 	//位置の計算
 	m_Position += m_Velocity * aqua::GetDeltaTime();
+
+	float w = (float)aqua::GetWindowWidth() - m_WrongTarget.GetTextureWidth();
+	float h = (float)aqua::GetWindowHeight() - m_WrongTarget.GetTextureHeight();
+
+	//壁判定
+
+	if (m_Position.x < 0.0f)
+	{
+		m_Position.x = 0.1f - m_Position.x;
+		m_Velocity.x *= -1.0f;
+	}
+	if (m_Position.x > w)
+	{
+		m_Position.x = w - (m_Position.x - w);
+		m_Velocity.x *= -1.0f;
+	}
+	if (m_Position.y < 0.0f)
+	{
+		m_Position.y = 0.1f - m_Position.y;
+		m_Velocity.y *= -1.0f;
+	}
+	if (m_Position.y > h)
+	{
+		m_Position.y = h - (m_Position.y - h);
+		m_Velocity.y *= -1.0f;
+	}
+
 
 	m_WrongTarget.position = m_Position;
 }
@@ -64,4 +89,16 @@ void CWrongTarget::Draw(void)
 void CWrongTarget::Finalize(void)
 {
 	m_WrongTarget.Delete();
+}
+
+void CWrongTarget::CheckHitMouse(void)
+{
+	if (!aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
+		return;
+
+	aqua::CPoint p = aqua::mouse::GetCursorPos();
+
+	aqua::CVector2 mpos = aqua::CVector2((float)p.x, (float)p.y);
+
+	aqua::CVector2 v = m_WrongTarget.position + aqua::CVector2(m_WrongTarget.GetTextureWidth() / 2.0f, m_WrongTarget.GetTextureHeight() / 3.0f) - mpos;
 }

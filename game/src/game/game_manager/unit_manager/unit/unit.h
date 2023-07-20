@@ -16,6 +16,8 @@ public:
 	//‰ğ•ú
 	void Finalize(void);
 
+	virtual bool Damage(int damage);
+
 	//ˆÊ’u‚Ìæ“¾
 	aqua::CVector2 GetPosition(void);
 
@@ -25,12 +27,30 @@ public:
 	//“–‚½‚è”¼Œa‚Ìæ“¾
 	float GetHitRadius(void);
 
+	int GetLife(void);
+
+	int GetMaxLife(void);
+
 	//•Ç”»’è
 	void CheckHitWall(void);
 protected:
+	//ó‘ÔID
+	enum class STATE
+	{
+		LIVE,
+		DEAD,
+	};
+
+	static const int m_default_max_life;
+	static const float m_dead_time;
+	static const int m_MaxLife;
 	aqua::CSprite m_UnitSprite;
 	aqua::CVector2 m_Position;
 	aqua::CVector2 m_Velocity;
-
+	aqua::CTimer	m_DeadTimer;
 	float m_HitRadius;
+	int m_Life;
+	
+	STATE	m_State;
+	
 };

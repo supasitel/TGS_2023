@@ -1,34 +1,26 @@
 #pragma once
-#include "aqua.h"
+#include "../../../unit_manager/unit_manager.h"
+#include "../../../unit_manager/unit/unit.h"
 
-class CCurrentTarget :public aqua::IGameObject
+class CCurrnetTarget :public IUnit
 {
 public:
 	//コンストラクタ
-	CCurrentTarget(aqua::IGameObject* parent);
+	CCurrnetTarget(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CCurrentTarget() = default;
+	~CCurrnetTarget() = default;
 
 	//初期化
-	void Initialize(void);
+	void Initialize(void)override;
 
 	//更新
-	void Update(void);
+	void Update(void)override;
 
 	//描画
-	void Draw(void);
+	void Draw(void)override;
 
 	//解放
-	void Finalize(void);
+	void Finalize(void)override;
 private:
-	//色
-	void SetColor(const aqua::CColor&& color);
-
-	static const int				m_width;					//幅
-	static const int				m_height;					//高さ
-	static const unsigned int		m_clicked_color;			//クリック時の色
-	static const unsigned int		m_default_color;			//選択前の色
-
-	aqua::CSprite					m_CurrentTarget;
 };

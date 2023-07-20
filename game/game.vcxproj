@@ -127,7 +127,6 @@
     <ClInclude Include="src\game\game_manager\ui_manager\time\time.h" />
     <ClInclude Include="src\game\game_manager\unit_manager\unit_manager.h" />
     <ClInclude Include="src\game\game_manager\unit_manager\unit\unit.h" />
-    <ClInclude Include="src\game\game_manager\unit_manager\unit\unit_id.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
