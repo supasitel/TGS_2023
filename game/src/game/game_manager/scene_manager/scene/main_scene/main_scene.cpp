@@ -12,11 +12,13 @@ void CMainScene::Initialize(void)
 {
 	CUnitManager* um = (CUnitManager*)aqua::CreateGameObject<CUnitManager>(this);
 
-	//ターゲットを10体生成
+	//不正解ターゲットを10体生成
 	for (int i = 0; i < 10; ++i)
 	{
 		um->Create(CUnitManager::UNIT_ID::WRONG);
 	}
+
+	um->Create(CUnitManager::UNIT_ID::CURRENT);
 
 	IGameObject::Initialize();
 }

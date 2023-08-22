@@ -30,6 +30,7 @@ void CWrongTarget::Initialize(void)
 	m_WrongTarget.anchor.x = (float)m_WrongTarget.GetTextureWidth() / 2.0f;
 	m_WrongTarget.anchor.y = (float)m_WrongTarget.GetTextureHeight() / 2.0f;
 
+	//•`‰æ”ÍˆÍ
 	m_WrongTarget.rect.top = 0;
 	m_WrongTarget.rect.left = 0;
 	m_WrongTarget.rect.bottom = m_WrongTarget.rect.top + aqua::GetWindowHeight();
@@ -53,7 +54,6 @@ void CWrongTarget::Update(void)
 	float h = (float)aqua::GetWindowHeight() - m_WrongTarget.GetTextureHeight();
 
 	//•Ç”»’è
-
 	if (m_Position.x < 0.0f)
 	{
 		m_Position.x = 0.1f - m_Position.x;
