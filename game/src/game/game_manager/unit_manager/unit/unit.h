@@ -34,12 +34,12 @@ public:
 	//ï«îªíË
 	void CheckHitWall(void);
 protected:
-	//èÛë‘ID
-	enum class STATE
-	{
-		LIVE,
-		DEAD,
-	};
+	////èÛë‘ID
+	//enum class STATE
+	//{
+	//	LIVE,
+	//	DEAD,
+	//};
 
 	static const int m_default_max_life;
 	static const float m_dead_time;
@@ -51,6 +51,6 @@ protected:
 	float m_HitRadius;
 	int m_Life;
 	
-	STATE	m_State;
+	//STATE	m_State;
 	
 };

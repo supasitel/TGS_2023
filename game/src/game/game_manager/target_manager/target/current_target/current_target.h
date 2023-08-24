@@ -1,6 +1,7 @@
 #pragma once
 #include "../../../unit_manager/unit_manager.h"
 #include "../../../unit_manager/unit/unit.h"
+#include "../../../scene_manager/scene_manager.h"
 
 class CCurrentTarget :public IUnit
 {
@@ -30,6 +31,8 @@ private:
 	static const float m_one_timer;			//１秒
 	static const float m_max_speed;			//最高速度
 	static const float m_min_speed;			//最低速度
+	static const int   m_width;
+	static const int   m_height;
 
 	int		m_CurrentTarget_Count;	//正解ターゲットの数
 	float   m_Width;				//幅

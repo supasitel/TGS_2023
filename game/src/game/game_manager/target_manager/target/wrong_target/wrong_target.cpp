@@ -1,7 +1,8 @@
 #include "wrong_target.h"
+#include "../../../ui_manager/time/time.h"
 
-const std::string CWrongTarget::m_name = "WrongTarget";	//名前
-const std::string CWrongTarget::m_category = "Target";	//カテゴリー
+const std::string CWrongTarget::m_name = "Wrong";	//名前
+const std::string CWrongTarget::m_category = "WrongTarget";	//カテゴリー
 const float CWrongTarget::m_one_timer = 1.0f;			//1秒
 const float CWrongTarget::m_max_speed = 100.0f;			//最高速度
 const float CWrongTarget::m_min_speed = 20.0f;			//最低速度
@@ -94,7 +95,8 @@ void CWrongTarget::Finalize(void)
 void CWrongTarget::CheckHitMouse(void)
 {
 	if (!aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
-		return;
+	{
+	}
 
 	aqua::CPoint p = aqua::mouse::GetCursorPos();
 

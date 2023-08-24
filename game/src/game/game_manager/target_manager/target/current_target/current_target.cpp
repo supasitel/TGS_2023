@@ -1,15 +1,17 @@
 #include "current_target.h"
 
-const std::string CCurrentTarget::m_category = "Target";	//カテゴリー
-const std::string CCurrentTarget::m_name = "CurrentTarget";	//名前
+const std::string CCurrentTarget::m_category = "CurrentTarget";	//カテゴリー
+const std::string CCurrentTarget::m_name = "Current";	//名前
 const float CCurrentTarget::m_one_timer = 1.0f;				//1秒
 const float CCurrentTarget::m_max_speed = 100.0f;			//最高速度
 const float CCurrentTarget::m_min_speed = 20.0f;			//最低速度
+const int   CCurrentTarget::m_width = 100.0f;
+const int   CCurrentTarget::m_height = 138.0f;
 
 //コンストラクタ
 CCurrentTarget::CCurrentTarget(aqua::IGameObject* parent)
 	:IUnit(parent, m_name, m_category)
-	, m_Width(100.0f), m_Height(138.0f), m_CurrentTarget_Count(1)
+	, m_Width(m_width), m_Height(m_height), m_CurrentTarget_Count(1)
 {
 }
 
@@ -46,7 +48,10 @@ void CCurrentTarget::Initialize(void)
 //更新
 void CCurrentTarget::Update(void)
 {
-	CheckHitMouse();
+	using namespace aqua::mouse;
+
+	//マウスの座標取得
+	aqua::CPoint mpos = GetCursorPos();
 
 	//位置の計算
 	m_Position += m_Velocity * aqua::GetDeltaTime();
@@ -78,6 +83,18 @@ void CCurrentTarget::Update(void)
 
 	m_CurrentTarget.position = m_Position;
 
+	//マウスカーソルが外側にある場合
+	if (mpos.x<m_CurrentTarget.position.x && mpos.x>m_CurrentTarget.position.x + m_width &&
+		mpos.y<m_CurrentTarget.position.y && mpos.y>m_CurrentTarget.position.y + m_height)
+	{
+	}
+	else
+	{
+	 // if (aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
+	 // {
+		//((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
+	 // }
+	}
 }
 
 //描画
@@ -92,16 +109,17 @@ void CCurrentTarget::Finalize(void)
 	m_CurrentTarget.Delete();
 }
 
-//マウス判定
-void CCurrentTarget::CheckHitMouse(void)
-{
-	//if (aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
-	//{
-	//}
-	aqua::CPoint p = aqua::mouse::GetCursorPos();
-
-	aqua::CVector2 mpos = aqua::CVector2((float)p.x, (float)p.y);
-
-	aqua::CVector2 v = m_CurrentTarget.position + aqua::CVector2(m_CurrentTarget.GetTextureWidth() / 2.0f, m_CurrentTarget.GetTextureHeight() / 3.0f) - mpos;
-
-}
+////マウス判定
+//void CCurrentTarget::CheckHitMouse(void)
+//{
+//	using namespace aqua::mouse;
+//
+//	//マウスの座標取得
+//	aqua::CPoint mpos = GetCursorPos();
+//
+//	//マウスカーソルが外側にある場合
+//	if (mpos.x<m_CurrentTarget.position.x && mpos.x>m_CurrentTarget.position.x + m_width &&
+//		mpos.y<m_CurrentTarget.position.y && mpos.y>m_CurrentTarget.position.y + m_height)
+//	{
+//	}
+//}
