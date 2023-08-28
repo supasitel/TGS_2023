@@ -6,7 +6,8 @@ enum class SCENE_ID
 	DUMMY,
 	TITLE,
 	MAIN,
-	RESULT,
+	CLEAR,
+	OVER,
 
 	MAX
 };

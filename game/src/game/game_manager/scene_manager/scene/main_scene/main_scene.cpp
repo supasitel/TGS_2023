@@ -36,7 +36,7 @@ void CMainScene::Update(void)
 	{
 		if (aqua::mouse::Released(aqua::mouse::BUTTON_ID::LEFT))
 		{
-			Change(SCENE_ID::RESULT);
+			Change(SCENE_ID::CLEAR);
 		}
 	}
 

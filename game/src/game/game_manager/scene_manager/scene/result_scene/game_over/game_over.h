@@ -1,15 +1,15 @@
 #pragma once
 #include "aqua.h"
-#include "../scene.h"
+#include "../../scene.h"
 
-class CResultScene :public IScene
+class COver :public IScene
 {
 public:
 	//コンストラクタ
-	CResultScene(aqua::IGameObject* parent);
+	COver(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CResultScene() = default;
+	~COver() = default;
 
 	//初期化
 	void Initialize(void)override;
@@ -22,9 +22,13 @@ public:
 
 	//解放
 	void Finalize(void)override;
+
 private:
 	static const int m_width;
 	static const int m_height;
 
-	aqua::CSprite	m_BackGround;
+	aqua::CLabel	m_Over;
+	aqua::CLabel	m_Message;
+	aqua::CSprite	m_Button;
+	aqua::CSprite	m_ButtonBlack;
 };

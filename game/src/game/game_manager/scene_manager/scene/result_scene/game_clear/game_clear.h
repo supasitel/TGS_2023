@@ -1,15 +1,15 @@
 #pragma once
 #include "aqua.h"
-#include "../scene.h"
+#include "../../scene.h"
 
-class CTitleScene :public IScene
+class CClearScene :public IScene
 {
 public:
 	//コンストラクタ
-	CTitleScene(aqua::IGameObject* parent);
+	CClearScene(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~CTitleScene() = default;
+	~CClearScene() = default;
 
 	//初期化
 	void Initialize(void)override;
@@ -26,10 +26,9 @@ private:
 	static const int m_width;
 	static const int m_height;
 
-	aqua::CLabel	m_Title;
+	aqua::CLabel	m_Clear;
 	aqua::CLabel	m_Message;
 	aqua::CSprite	m_BackGround;
 	aqua::CSprite	m_Button;
 	aqua::CSprite	m_ButtonBlack;
-
 };

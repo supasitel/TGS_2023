@@ -1,7 +1,7 @@
 #include "scene_manager.h"
 #include "scene/title_scene/title_scene.h"
 #include "scene/main_scene/main_scene.h"
-#include "scene/result_scene/result_scene.h"
+#include "scene/result_scene/game_clear/game_clear.h"
 
 const float CSceneManager::m_fade_speed = 250.0f;	//フェード速度
 
@@ -124,7 +124,7 @@ void CSceneManager::Create(SCENE_ID id)
 	{
 	case SCENE_ID::TITLE:		scene = aqua::CreateGameObject<CTitleScene>(this); break;
 	case SCENE_ID::MAIN:		scene = aqua::CreateGameObject<CMainScene>(this); break;
-	case SCENE_ID::RESULT:		scene = aqua::CreateGameObject<CResultScene>(this); break;
+	case SCENE_ID::CLEAR:		scene = aqua::CreateGameObject<CClearScene>(this); break;
 	}
 
 	AQUA_ASSERT(scene, "シーンが生成できませんでした。");

@@ -1,6 +1,6 @@
 #include "time.h"
 
-const int	CTime::m_default_time_limit = 30;	//初期の制限時間
+const int	CTime::m_default_time_limit = 3;	//初期の制限時間
 const float CTime::m_one_timer = 1.0f;//1秒
 
 //コンストラクタ
@@ -47,7 +47,7 @@ void CTime::Update(void)
 	if (m_TimeLimit == 0)
 	{
 		//リザルトシーンに移行
-		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::CLEAR);
 	}
 }
 
