@@ -19,7 +19,8 @@ void CTitleScene::Initialize(void)
 
 	//タイトル
 	m_Title.Create(70, 2);
-	m_Title.position = { 400,100 };
+	m_Title.position.x = (float)aqua::GetWindowWidth() / 3.75f - (float)m_Title.GetTextWidth() / 3.75f;
+	m_Title.position.y = (float)aqua::GetWindowHeight() / 4.0f - (float)m_Title.GetFontHeight() / 4.0f;
 	m_Title.text = "ペンギンの捕獲";
 
 	//ボタン
