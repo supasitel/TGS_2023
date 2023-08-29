@@ -23,4 +23,5 @@ private:
 		PLAY,
 	};
 	STATE	m_State;
+
 };

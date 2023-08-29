@@ -1,6 +1,5 @@
 #pragma once
-#include "../../../unit_manager/unit_manager.h"
-#include "../../../unit_manager/unit/unit.h"
+#include "../../../unit/unit.h"
 
 class CWrongTarget :public IUnit
 {
@@ -23,6 +22,7 @@ public:
 	//解放
 	void Finalize(void)override;
 
+	//マウス判定
 	void CheckHitMouse(void);
 private:
 	static const std::string	m_name;		//名前
@@ -31,11 +31,11 @@ private:
 	static const float m_max_speed;			//最高速度
 	static const float m_min_speed;			//最低速度
 
-	int		m_WrongTarget_Count;	//不正解ターゲットの数
-	float   m_Width;				//幅
-	float	m_Height;				//高さ
-	float   m_Speed;				//速度
+	int		m_WrongTarget_Count;			//不正解ターゲットの数
+	float   m_Width;						//幅
+	float	m_Height;						//高さ
+	float   m_Speed;						//速度
 
-	aqua::CSprite	m_WrongTarget;
-	aqua::CTimer	m_Timer;
+	aqua::CSprite	m_WrongTarget;			//不正解ターゲット
+	aqua::CTimer	m_Timer;				//タイマー
 };

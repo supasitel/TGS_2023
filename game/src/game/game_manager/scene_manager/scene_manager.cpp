@@ -2,6 +2,7 @@
 #include "scene/title_scene/title_scene.h"
 #include "scene/main_scene/main_scene.h"
 #include "scene/result_scene/game_clear/game_clear.h"
+#include "scene/result_scene/game_over/game_over.h"
 
 const float CSceneManager::m_fade_speed = 250.0f;	//フェード速度
 
@@ -38,6 +39,7 @@ void CSceneManager::Initialize(void)
 //更新
 void CSceneManager::Update(void)
 {
+	//状態の更新
 	switch (m_State)
 	{
 	case STATE::SCENE_IN:		SceneIn();		break;
@@ -109,8 +111,10 @@ void CSceneManager::Eject(void)
 //リセット
 void CSceneManager::Reset(void)
 {
+	//次のシーンIDを現在のシーンIDに代入
 	m_NextSceneID = m_CurrentSceneID;
 
+	//現在のシーンIDにダミーシーンを代入
 	m_CurrentSceneID = SCENE_ID::DUMMY;
 }
 
@@ -125,6 +129,7 @@ void CSceneManager::Create(SCENE_ID id)
 	case SCENE_ID::TITLE:		scene = aqua::CreateGameObject<CTitleScene>(this); break;
 	case SCENE_ID::MAIN:		scene = aqua::CreateGameObject<CMainScene>(this); break;
 	case SCENE_ID::CLEAR:		scene = aqua::CreateGameObject<CClearScene>(this); break;
+	case SCENE_ID::OVER:		scene = aqua::CreateGameObject<COver>(this)break;
 	}
 
 	AQUA_ASSERT(scene, "シーンが生成できませんでした。");

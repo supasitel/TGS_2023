@@ -1,6 +1,6 @@
 #include "time.h"
 
-const int	CTime::m_default_time_limit = 3;	//初期の制限時間
+const int	CTime::m_default_time_limit = 30;	//制限時間
 const float CTime::m_one_timer = 1.0f;//1秒
 
 //コンストラクタ
@@ -18,6 +18,7 @@ void CTime::Initialize(void)
 	//1秒タイマーをセット
 	m_OneTimer.Setup(m_one_timer);
 
+	//タイムリミットに制限時間を代入
 	m_TimeLimit = m_default_time_limit;
 
 
@@ -46,16 +47,18 @@ void CTime::Update(void)
 	//制限時間が0秒になったら
 	if (m_TimeLimit == 0)
 	{
-		//リザルトシーンに移行
-		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::CLEAR);
+		//ゲームオーバーシーンに移行
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::OVER);
 	}
 }
 
 //描画
 void CTime::Draw(void)
 {
-	//タイマーテキストの描画
+	//タイマーテキスト
 	m_TimerLabel.text = "残り" + std::to_string(m_TimeLimit) + "秒";
+
+	//たーまーテキストの位置
 	m_TimerLabel.position = { 800.0f,0.0f };
 
 	m_TimerLabel.Draw();
@@ -70,5 +73,6 @@ void CTime::Finalize(void)
 //終了
 bool CTime::Finished(void)
 {
+	//制限時間が0秒以下なら返す
 	return (m_TimeLimit <= 0);
 }

@@ -1,8 +1,8 @@
 #include "title_scene.h"
 #include "../../scene_manager.h"
 
-const int CTitleScene::m_width = 522;
-const int CTitleScene::m_height = 100;
+const int CTitleScene::m_width = 522;	//幅
+const int CTitleScene::m_height = 100;	//高さ
 
 //コンストラクタ
 CTitleScene::CTitleScene(aqua::IGameObject* parent)
@@ -27,11 +27,6 @@ void CTitleScene::Initialize(void)
 	m_Button.position.x = (float)aqua::GetWindowWidth() / 2.5f - (float)m_Button.GetTextureWidth() / 2.5f;
 	m_Button.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_Button.GetTextureHeight() / 1.25f;
 
-	////ボタン【発光】
-	//m_ButtonBlack.Create("data\\button_black_hakkou.png");
-	//m_ButtonBlack.position.x = (float)aqua::GetWindowWidth() / 2.35f - (float)m_ButtonBlack.GetTextureWidth() / 2.35f;
-	//m_ButtonBlack.position.y = (float)aqua::GetWindowHeight() / 1.33f - (float)m_ButtonBlack.GetTextureHeight() / 1.33f;
-
 	//メッセージ
 	m_Message.Create(40, 2);
 	m_Message.text = "ゲームを始める";
@@ -43,6 +38,7 @@ void CTitleScene::Initialize(void)
 //更新
 void CTitleScene::Update(void)
 {
+	//aqua::mouseの省略
 	using namespace aqua::mouse;
 
 	aqua::CPoint mpos = GetCursorPos();
@@ -68,7 +64,8 @@ void CTitleScene::Update(void)
 		m_ButtonBlack.position.x = (float)aqua::GetWindowWidth() / 2.5f - m_ButtonBlack.GetTextureWidth() / 2.5f;
 		m_ButtonBlack.position.y = (float)aqua::GetWindowHeight() / 1.25f - m_ButtonBlack.GetTextureHeight() / 1.25f;
 		
-		if (Trigger(BUTTON_ID::LEFT))
+		//左ボタンを離したらゲームメインに移行
+		if (Released(BUTTON_ID::LEFT))
 		{
 			Change(SCENE_ID::MAIN);
 		}

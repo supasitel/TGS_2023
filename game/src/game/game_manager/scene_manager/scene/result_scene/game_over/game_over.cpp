@@ -1,7 +1,7 @@
 #include "game_over.h"
 
-const int COver::m_width = 522;
-const int COver::m_height = 100;
+const int COver::m_width = 522;		//幅
+const int COver::m_height = 100;	//高さ
 
 //コンストラクタ
 COver::COver(aqua::IGameObject* parent)
@@ -34,25 +34,32 @@ void COver::Initialize(void)
 //更新
 void COver::Update(void)
 {
+	//aqua::mouseの省略
 	using namespace aqua::mouse;
 
 	aqua::CPoint mpos = GetCursorPos();
 
+	//マウスカーソルがボタンの外側にある場合
 	if (mpos.x<m_Button.position.x || mpos.x>m_Button.position.x + m_width ||
 		mpos.y<m_Button.position.y || mpos.y>m_Button.position.y + m_height)
 	{
+		//ボタン（発光）の削除
 		m_ButtonBlack.Delete();
 
+		//ボタンの可視化
 		m_Button.visible = true;
 	}
 	else
 	{
+		//ボタンの不可視化
 		m_Button.visible = false;
 
+		//ボタン（発光）
 		m_ButtonBlack.Create("data\\button_black_hakkou.png");
 		m_ButtonBlack.position.x = (float)aqua::GetWindowWidth() / 2.5f - (float)m_ButtonBlack.GetTextureWidth() / 2.5f;
 		m_ButtonBlack.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_ButtonBlack.GetTextureHeight() / 1.25f;
 	
+		//左ボタンを離したらタイトルに移行
 		if (Released(BUTTON_ID::LEFT))
 		{
 			Change(SCENE_ID::TITLE);

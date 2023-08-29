@@ -1,11 +1,11 @@
 #include "wrong_target.h"
 #include "../../../ui_manager/time/time.h"
 
-const std::string CWrongTarget::m_name = "Wrong";	//名前
+const std::string CWrongTarget::m_name = "Wrong";			//名前
 const std::string CWrongTarget::m_category = "WrongTarget";	//カテゴリー
-const float CWrongTarget::m_one_timer = 1.0f;			//1秒
-const float CWrongTarget::m_max_speed = 100.0f;			//最高速度
-const float CWrongTarget::m_min_speed = 20.0f;			//最低速度
+const float CWrongTarget::m_one_timer = 1.0f;				//1秒
+const float CWrongTarget::m_max_speed = 100.0f;				//最高速度
+const float CWrongTarget::m_min_speed = 20.0f;				//最低速度
 
 //コンストラクタ
 CWrongTarget::CWrongTarget(aqua::IGameObject* parent)
@@ -48,6 +48,7 @@ void CWrongTarget::Initialize(void)
 void CWrongTarget::Update(void)
 {	
 	CheckHitMouse();
+
 	//位置の計算
 	m_Position += m_Velocity * aqua::GetDeltaTime();
 
@@ -75,8 +76,6 @@ void CWrongTarget::Update(void)
 		m_Position.y = h - (m_Position.y - h);
 		m_Velocity.y *= -1.0f;
 	}
-
-
 	m_WrongTarget.position = m_Position;
 }
 
@@ -92,13 +91,16 @@ void CWrongTarget::Finalize(void)
 	m_WrongTarget.Delete();
 }
 
+//マウス判定
 void CWrongTarget::CheckHitMouse(void)
 {
-	if (!aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
+	using namespace aqua::mouse;
+
+	if (!Trigger(BUTTON_ID::LEFT))
 	{
 	}
 
-	aqua::CPoint p = aqua::mouse::GetCursorPos();
+	aqua::CPoint p = GetCursorPos();
 
 	aqua::CVector2 mpos = aqua::CVector2((float)p.x, (float)p.y);
 

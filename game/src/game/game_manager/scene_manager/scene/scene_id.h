@@ -3,11 +3,11 @@
 
 enum class SCENE_ID
 {
-	DUMMY,
-	TITLE,
-	MAIN,
-	CLEAR,
-	OVER,
+	DUMMY,	//ダミー
+	TITLE,	//タイトル
+	MAIN,	//メイン
+	CLEAR,	//ゲームクリア
+	OVER,	//ゲームオーバー
 
 	MAX
 };

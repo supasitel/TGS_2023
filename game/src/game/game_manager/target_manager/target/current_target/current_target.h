@@ -1,6 +1,5 @@
 #pragma once
-#include "../../../unit_manager/unit_manager.h"
-#include "../../../unit_manager/unit/unit.h"
+#include "../../../unit/unit.h"
 #include "../../../scene_manager/scene_manager.h"
 
 class CCurrentTarget :public IUnit
@@ -24,7 +23,6 @@ public:
 	//解放
 	void Finalize(void)override;
 
-	void CheckHitMouse(void);
 private:
 	static const std::string	m_name;		//名前
 	static const std::string	m_category;	//カテゴリー
