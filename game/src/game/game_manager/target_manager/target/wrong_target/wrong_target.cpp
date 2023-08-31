@@ -1,5 +1,6 @@
 #include "wrong_target.h"
 #include "../../../ui_manager/time/time.h"
+#include"../../../sound_manager/sound_manager.h"
 
 const std::string CWrongTarget::m_name = "Wrong";			//名前
 const std::string CWrongTarget::m_category = "WrongTarget";	//カテゴリー
@@ -96,8 +97,11 @@ void CWrongTarget::CheckHitMouse(void)
 {
 	using namespace aqua::mouse;
 
-	if (!Trigger(BUTTON_ID::LEFT))
+	if (Trigger(BUTTON_ID::LEFT))
 	{
+		CSoundManager* sound = (CSoundManager*)aqua::FindGameObject("SoundManager");
+
+		if (sound)sound->Play(SOUND_ID::TCLICK);
 	}
 
 	aqua::CPoint p = GetCursorPos();

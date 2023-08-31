@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game\game.cpp" />
+    <ClCompile Include="src\game\game_manager\back_ground\back_ground.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\result_scene\game_clear\game_clear.cpp" />
     <ClCompile Include="src\game\game_manager\scene_manager\scene\result_scene\game_over\game_over.cpp" />
@@ -115,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game\game_manager\back_ground\back_ground.h" />
     <ClInclude Include="src\game\game_manager\game_manager.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\main_scene\main_scene.h" />
     <ClInclude Include="src\game\game_manager\scene_manager\scene\result_scene\game_clear\game_clear.h" />

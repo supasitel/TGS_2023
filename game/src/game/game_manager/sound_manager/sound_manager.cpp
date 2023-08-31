@@ -1,12 +1,22 @@
 #include "sound_manager.h"
 
-//サウンドファイル
-CSoundManager::CSoundManager(aqua::IGameObject* parent)
+//サウンドファイル名
+const std::string CSoundManager::m_sound_file_name[] =
 {
-
-}
+	"data\\海岸1.mp3",
+	"data\\decision.mp3",
+	"data\\button_click.mp3",
+	"data\\target_click.mp3",
+};
 
 //コンストラクタ
+CSoundManager::CSoundManager(aqua::IGameObject* parent)
+	:aqua::IGameObject(parent, "SoundManager")
+	, m_SoundPlayer(nullptr)
+{
+}
+
+//初期化
 void CSoundManager::Initialize(void)
 {
 	if (!m_SoundPlayer)m_SoundPlayer = AQUA_NEW aqua::CSoundPlayer[(int)SOUND_ID::MAX];
@@ -17,6 +27,7 @@ void CSoundManager::Initialize(void)
 	//SEは単発
 	for (int i = (int)SOUND_ID::DECISION; i < (int)SOUND_ID::MAX; ++i)
 		m_SoundPlayer[i].Create(m_sound_file_name[i], false, 100);
+
 }
 
 //解放

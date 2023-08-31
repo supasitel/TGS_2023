@@ -17,11 +17,4 @@ public:
 	//çXêV
 	void Update(void)override;
 private:
-	enum class STATE
-	{
-		START,
-		PLAY,
-	};
-	STATE	m_State;
-
 };

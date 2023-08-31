@@ -1,8 +1,6 @@
 #include "main_scene.h"
 #include "../../../unit/unit.h"
 #include "game/game_manager/game_manager.h"
-#include "../../../target_manager/target/current_target/current_target.h"
-#include "../../../target_manager/target/wrong_target/wrong_target.h"
 
 //コンストラクタ
 CMainScene::CMainScene(aqua::IGameObject* parent)
@@ -13,7 +11,10 @@ CMainScene::CMainScene(aqua::IGameObject* parent)
 //初期化
 void CMainScene::Initialize(void)
 {
-	//タイマーの生成
+	//背景のゲームオブジェクト生成
+	(CBackGround*)aqua::CreateGameObject<CBackGround>(this);
+
+	//タイマーのゲームオブジェクト生成
 	(CTime*)aqua::CreateGameObject<CTime>(this);
 
 	//不正解ターゲットを10体生成
@@ -22,7 +23,7 @@ void CMainScene::Initialize(void)
 		(CWrongTarget*)aqua::CreateGameObject<CWrongTarget>(this);
 	}
 
-	//正解ターゲットの生成
+	//正解ターゲットのゲームオブジェクト生成
 	(CCurrentTarget*)aqua::CreateGameObject<CCurrentTarget>(this);
 
 	IGameObject::Initialize();

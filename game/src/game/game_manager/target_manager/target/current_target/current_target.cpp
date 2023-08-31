@@ -1,4 +1,5 @@
 #include "current_target.h"
+#include "../../../sound_manager/sound_manager.h"
 
 const std::string CCurrentTarget::m_category = "CurrentTarget";	//カテゴリー
 const std::string CCurrentTarget::m_name = "Current";			//名前
@@ -82,6 +83,7 @@ void CCurrentTarget::Update(void)
 		m_Velocity.y *= -1.0f;
 	}
 
+	//正解ターゲットの位置に代入
 	m_CurrentTarget.position = m_Position;
 
 	//マウスカーソルが外側にある場合
@@ -94,6 +96,11 @@ void CCurrentTarget::Update(void)
 		//正解ターゲットをクリックしたらゲームクリアシーンに移行
 		if (aqua::mouse::Trigger(aqua::mouse::BUTTON_ID::LEFT))
 		{
+			CSoundManager* sound = (CSoundManager*)aqua::FindGameObject("SoundManager");
+
+			//ターゲットクリック音を再生
+			if (sound)sound->Play(SOUND_ID::TCLICK);
+
 			((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::CLEAR);
 		}
 	}
