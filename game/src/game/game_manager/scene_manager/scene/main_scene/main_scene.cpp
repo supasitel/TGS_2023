@@ -17,8 +17,8 @@ void CMainScene::Initialize(void)
 	//タイマーのゲームオブジェクト生成
 	(CTime*)aqua::CreateGameObject<CTime>(this);
 
-	//不正解ターゲットを10体生成
-	for (int i = 0; i < 10; ++i)
+	//不正解ターゲットを生成
+	for (int i = 0; i < 50; ++i)
 	{
 		(CWrongTarget*)aqua::CreateGameObject<CWrongTarget>(this);
 	}
