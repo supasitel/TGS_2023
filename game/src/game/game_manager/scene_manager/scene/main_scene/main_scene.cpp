@@ -22,9 +22,12 @@ void CMainScene::Initialize(void)
 	{
 		(CWrongTarget*)aqua::CreateGameObject<CWrongTarget>(this);
 	}
-
+	
 	//正解ターゲットのゲームオブジェクト生成
 	(CCurrentTarget*)aqua::CreateGameObject<CCurrentTarget>(this);
+
+	//スタートメッセージのゲームオブジェクト生成
+	aqua::CreateGameObject<CStartMessage>(this)->Initialize();
 
 	IGameObject::Initialize();
 }

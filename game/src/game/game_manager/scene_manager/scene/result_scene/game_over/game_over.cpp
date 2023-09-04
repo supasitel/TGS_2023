@@ -70,10 +70,10 @@ void COver::Update(void)
 //•`‰æ
 void COver::Draw(void)
 {
-	m_Message.Draw();
 	m_Over.Draw();
 	m_Button.Draw();
 	m_ButtonBlack.Draw();
+	m_Message.Draw();
 }
 
 //‰ð•ú

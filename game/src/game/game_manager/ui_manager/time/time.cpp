@@ -1,4 +1,5 @@
 #include "time.h"
+#include "../../message/finish_message/finish_message.h"
 
 const int	CTime::m_default_time_limit = 30;	//制限時間
 const float CTime::m_one_timer = 1.0f;//1秒
@@ -20,7 +21,6 @@ void CTime::Initialize(void)
 
 	//タイムリミットに制限時間を代入
 	m_TimeLimit = m_default_time_limit;
-
 
 }
 
@@ -47,9 +47,12 @@ void CTime::Update(void)
 	//制限時間が0秒になったら
 	if (m_TimeLimit == 0)
 	{
+
 		//ゲームオーバーシーンに移行
 		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::OVER);
+
 	}
+
 }
 
 //描画
