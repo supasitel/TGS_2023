@@ -3,6 +3,7 @@
 #include "scene/main_scene/main_scene.h"
 #include "scene/result_scene/game_clear/game_clear.h"
 #include "scene/result_scene/game_over/game_over.h"
+#include "scene/explanation_scene/explanation_scene.h"
 
 const float CSceneManager::m_fade_speed = 250.0f;	//フェード速度
 
@@ -127,6 +128,7 @@ void CSceneManager::Create(SCENE_ID id)
 	switch (id)
 	{
 	case SCENE_ID::TITLE:		scene = aqua::CreateGameObject<CTitleScene>(this); break;
+	case SCENE_ID::EXPLANATION: scene = aqua::CreateGameObject<CExplanationScene>(this); break;
 	case SCENE_ID::MAIN:		scene = aqua::CreateGameObject<CMainScene>(this); break;
 	case SCENE_ID::CLEAR:		scene = aqua::CreateGameObject<CClearScene>(this); break;
 	case SCENE_ID::OVER:		scene = aqua::CreateGameObject<COver>(this); break;

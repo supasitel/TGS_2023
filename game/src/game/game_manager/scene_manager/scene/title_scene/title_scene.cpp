@@ -68,7 +68,7 @@ void CTitleScene::Update(void)
 		//左ボタンを離したらゲームメインに移行
 		if (Released(BUTTON_ID::LEFT))
 		{
-			Change(SCENE_ID::MAIN);
+			Change(SCENE_ID::EXPLANATION);
 		}
 	}
 }
