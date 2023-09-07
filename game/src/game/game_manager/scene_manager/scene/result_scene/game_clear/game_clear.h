@@ -23,12 +23,12 @@ public:
 	//解放
 	void Finalize(void)override;
 private:
-	static const int m_width;
-	static const int m_height;
+	static const int m_width;		//幅
+	static const int m_height;		//高さ
 
-	aqua::CLabel	m_Clear;
-	aqua::CLabel	m_Message;
-	aqua::CSprite	m_BackGround;
-	aqua::CSprite	m_Button;
-	aqua::CSprite	m_ButtonBlack;
+	aqua::CLabel	m_Clear;		//クリアメッセージ
+	aqua::CLabel	m_Message;		//メッセージ
+	aqua::CSprite	m_BackGround;	//背景
+	aqua::CSprite	m_Button;		//ボタン
+	aqua::CSprite	m_ButtonBlack;	//ボタン(発光)
 };

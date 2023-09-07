@@ -25,9 +25,12 @@ void CExplanationScene::Initialize(void)
 	m_Target.position.x = (float)aqua::GetWindowWidth() / 2.0f - (float)m_Target.GetTextureWidth() / 2.0f;
 	m_Target.position.y = (float)aqua::GetWindowHeight() / 1.75f - (float)m_Target.GetTextureHeight() / 1.75f;
 
-	//
+	//メッセージ
 	m_Label.Create(35, 2);
 	m_Label.edge_color = aqua::CColor::BLACK;
+	m_Label.text = "・左クリックしたらゲームが始まるよ";
+	m_Label.position.x = (float)aqua::GetWindowWidth() / 2.0f - (float)m_Label.GetTextWidth() / 2.0f;
+	m_Label.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_Label.GetFontHeight() / 1.25f;
 
 }
 
@@ -48,6 +51,7 @@ void CExplanationScene::Draw(void)
 	m_BackGround.Draw();
 	m_Explanation.Draw();
 	m_Target.Draw();
+	m_Label.Draw();
 }
 
 //解放
@@ -56,4 +60,5 @@ void CExplanationScene::Finalize(void)
 	m_BackGround.Delete();
 	m_Explanation.Delete();
 	m_Target.Delete();
+	m_Label.Draw();
 }

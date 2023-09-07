@@ -14,7 +14,7 @@ CTitleScene::CTitleScene(aqua::IGameObject* parent)
 void CTitleScene::Initialize(void)
 {
 	//”wŒi
-	m_BackGround.Create("data\\green_ground.png");
+	m_BackGround.Create("data\\title_ground.png");
 	m_BackGround.position = aqua::CVector2::ZERO;
 
 	//ƒ^ƒCƒgƒ‹

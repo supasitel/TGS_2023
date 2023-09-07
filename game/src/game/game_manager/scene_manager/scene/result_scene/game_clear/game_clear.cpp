@@ -13,7 +13,7 @@ CClearScene::CClearScene(aqua::IGameObject* parent)
 void CClearScene::Initialize(void)
 {
 	//îwåi
-	m_BackGround.Create("data\\green_ground.png");
+	m_BackGround.Create("data\\result_ground.png");
 	m_BackGround.position = aqua::CVector2::ZERO;
 
 	//ÉQÅ[ÉÄÉNÉäÉA

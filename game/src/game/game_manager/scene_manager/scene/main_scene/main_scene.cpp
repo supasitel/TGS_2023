@@ -15,7 +15,9 @@ void CMainScene::Initialize(void)
 	(CBackGround*)aqua::CreateGameObject<CBackGround>(this);
 
 	//タイマーのゲームオブジェクト生成
-	(CTime*)aqua::CreateGameObject<CTime>(this);
+	CTime*time=aqua::CreateGameObject<CTime>(this);
+	//タイマーの状態をwaitにする
+	time->SetGameObjectState(aqua::GAME_OBJECT_STATE::WAIT);
 
 	//不正解ターゲットを生成
 	for (int i = 0; i < 50; ++i)
@@ -35,5 +37,11 @@ void CMainScene::Initialize(void)
 //更新
 void CMainScene::Update(void)
 {
+	//スタートメッセージの表示が終わったら制限時間をactiveにする
+	if (!FindChild("StartMessage"))
+	{
+		CTime*time=(CTime*)aqua::FindGameObject("Time");
+		time->SetGameObjectState(aqua::GAME_OBJECT_STATE::ACTIVE);
+	}
 	IGameObject::Update();
 }

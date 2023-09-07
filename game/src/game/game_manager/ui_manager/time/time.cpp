@@ -1,7 +1,7 @@
 #include "time.h"
 #include "../../message/finish_message/finish_message.h"
 
-const int	CTime::m_default_time_limit = 30;	//制限時間
+const int	CTime::m_default_time_limit = 3;	//制限時間
 const float CTime::m_one_timer = 1.0f;//1秒
 
 //コンストラクタ

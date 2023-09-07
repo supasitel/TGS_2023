@@ -30,4 +30,5 @@ private:
 	aqua::CLabel	m_Message;		//メッセージラベル
 	aqua::CSprite	m_Button;		//ボタンスプライト
 	aqua::CSprite	m_ButtonBlack;	//ボタン（発光）スプライト
+	aqua::CSprite	m_BackGround;	//背景
 };

@@ -29,6 +29,9 @@ void COver::Initialize(void)
 	m_Button.Create("data\\button_black.png");
 	m_Button.position.x = (float)aqua::GetWindowWidth() / 2.5f - (float)m_Button.GetTextureWidth() / 2.5f;
 	m_Button.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_Button.GetTextureHeight() / 1.25f;
+
+	m_BackGround.Create("data\\game_over.png");
+	m_BackGround.position = aqua::CVector2::ZERO;
 }
 
 //çXêV
@@ -70,6 +73,7 @@ void COver::Update(void)
 //ï`âÊ
 void COver::Draw(void)
 {
+	m_BackGround.Draw();
 	m_Over.Draw();
 	m_Button.Draw();
 	m_ButtonBlack.Draw();
@@ -79,6 +83,7 @@ void COver::Draw(void)
 //âï˙
 void COver::Finalize(void)
 {
+	m_BackGround.Delete();
 	m_Message.Delete();
 	m_Over.Delete();
 }

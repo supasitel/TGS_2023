@@ -23,8 +23,8 @@ public:
 	//解放
 	void Finalize(void)override;
 private:
-	aqua::CSprite	m_BackGround;
-	aqua::CSprite	m_Target;
-	aqua::CLabel	m_Explanation;
-	aqua::CLabel	m_Label;
+	aqua::CSprite	m_BackGround;	//背景
+	aqua::CSprite	m_Target;		//ターゲット
+	aqua::CLabel	m_Explanation;	//説明
+	aqua::CLabel	m_Label;		//ラベル
 };
