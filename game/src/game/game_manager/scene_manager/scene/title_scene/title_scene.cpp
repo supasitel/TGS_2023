@@ -42,6 +42,7 @@ void CTitleScene::Update(void)
 	//aqua::mouseの省略
 	using namespace aqua::mouse;
 
+	//マウスカーソル座標の取得
 	aqua::CPoint mpos = GetCursorPos();
 
 	//マウスカーソルが黒ボタンの外側にある場合
