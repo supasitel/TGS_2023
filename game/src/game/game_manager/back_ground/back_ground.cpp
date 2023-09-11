@@ -9,6 +9,7 @@ CBackGround::CBackGround(aqua::IGameObject* parent)
 //‰Šú‰»
 void CBackGround::Initialize(void)
 {
+	//”wŒi
 	m_BackGround.Create("data\\main_ground.png");
 	m_BackGround.position = aqua::CVector2::ZERO;
 }

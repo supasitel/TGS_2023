@@ -19,5 +19,5 @@ public:
 	//‰ð•ú
 	void Finalize(void)override;
 private:
-	aqua::CSprite	m_BackGround;
+	aqua::CSprite	m_BackGround;	//”wŒi
 };
