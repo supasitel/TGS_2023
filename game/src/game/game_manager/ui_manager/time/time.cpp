@@ -14,7 +14,7 @@ CTime::CTime(aqua::IGameObject* parent)
 void CTime::Initialize(void)
 {
 	//テキストの生成
-	m_TimerLabel.Create(35, 2);
+	m_TimerLabel.Create(40, 2);
 
 	//1秒タイマーをセット
 	m_OneTimer.Setup(m_one_timer);

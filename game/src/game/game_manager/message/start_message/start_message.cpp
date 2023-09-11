@@ -3,7 +3,7 @@
 const float CStartMessage::m_min_scale = 0.0f;		//最小拡大率
 const float CStartMessage::m_max_scale = 1.5f;		//最大拡大率
 const float CStartMessage::m_easing_time = 1.5f;	//イージング時間
-const float CStartMessage::m_view_time = 2.5f;		//メッセージ表示時間
+const float CStartMessage::m_view_time = 2.0f;		//メッセージ表示時間
 
 //コンストラクタ
 CStartMessage::CStartMessage(aqua::IGameObject* parent)

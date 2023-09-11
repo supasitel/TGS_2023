@@ -96,8 +96,6 @@ Initialize( HINSTANCE instance_handle, aqua::IGameObject* game )
     // ゲーム画面の解像度に合わせてフルスクリーンにする
     SetFullScreenResolutionMode( DX_FSRESOLUTIONMODE_NATIVE );
 
-    //Releaseでもカーソル表示
-    SetMouseDispFlag(TRUE);
 #endif
 
     // DirectX11のバージョンを指定する
@@ -107,6 +105,9 @@ Initialize( HINSTANCE instance_handle, aqua::IGameObject* game )
     // DXライブラリ初期化
     if( DxLib_Init( ) == AQUA_DX_ERROR )
         return;
+
+    //Releaseでもカーソル表示
+    SetMouseDispFlag(TRUE);
 
     // Effekseer初期化
     if( Effkseer_Init( m_max_effekseer_particle ) == AQUA_DX_ERROR )

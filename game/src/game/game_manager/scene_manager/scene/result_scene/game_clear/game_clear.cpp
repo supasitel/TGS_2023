@@ -63,7 +63,7 @@ void CClearScene::Update(void)
 		m_ButtonBlack.position.x = (float)aqua::GetWindowWidth() / 2.5f - (float)m_ButtonBlack.GetTextureWidth() / 2.5f;
 		m_ButtonBlack.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_ButtonBlack.GetTextureHeight() / 1.25f;
 
-		//離したらタイトルに移行
+		//左ボタンを離したらタイトルに移行
 		if (Released(BUTTON_ID::LEFT))
 		{
 			Change(SCENE_ID::TITLE);

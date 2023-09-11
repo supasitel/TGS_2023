@@ -30,6 +30,7 @@ void COver::Initialize(void)
 	m_Button.position.x = (float)aqua::GetWindowWidth() / 2.5f - (float)m_Button.GetTextureWidth() / 2.5f;
 	m_Button.position.y = (float)aqua::GetWindowHeight() / 1.25f - (float)m_Button.GetTextureHeight() / 1.25f;
 
+	//îwåi
 	m_BackGround.Create("data\\game_over.png");
 	m_BackGround.position = aqua::CVector2::ZERO;
 }

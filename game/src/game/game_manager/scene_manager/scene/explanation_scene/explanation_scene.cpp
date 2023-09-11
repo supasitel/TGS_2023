@@ -37,8 +37,10 @@ void CExplanationScene::Initialize(void)
 //更新
 void CExplanationScene::Update(void)
 {
+	//aqua::mouseの省略
 	using namespace aqua::mouse;
 
+	//左ボタンを離したらメインシーンに移行
 	if (Released(BUTTON_ID::LEFT))
 	{
 		Change(SCENE_ID::MAIN);

@@ -10,5 +10,5 @@ enum class SCENE_ID
 	CLEAR,	//ゲームクリア
 	OVER,	//ゲームオーバー
 
-	MAX
+	MAX		//最大
 };
