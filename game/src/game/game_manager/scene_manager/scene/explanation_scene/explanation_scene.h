@@ -26,5 +26,5 @@ private:
 	aqua::CSprite	m_BackGround;	//背景
 	aqua::CSprite	m_Target;		//ターゲット
 	aqua::CLabel	m_Explanation;	//説明
-	aqua::CLabel	m_Label;		//ラベル
+	aqua::CLabel	m_Message;		//メッセージ
 };

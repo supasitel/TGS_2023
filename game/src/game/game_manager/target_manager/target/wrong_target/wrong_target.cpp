@@ -11,7 +11,7 @@ const float CWrongTarget::m_min_speed = 20.0f;				//最低速度
 //コンストラクタ
 CWrongTarget::CWrongTarget(aqua::IGameObject* parent)
 	:IUnit(parent, m_name, m_category)
-	, m_Width(100.0f), m_Height(138.0f), m_WrongTarget_Count(50)
+	, m_Width(100.0f), m_Height(138.0f)
 {
 }
 

@@ -2,14 +2,14 @@
 #include "aqua.h"
 #include "../../scene.h"
 
-class COver :public IScene
+class CGameOver :public IScene
 {
 public:
 	//コンストラクタ
-	COver(aqua::IGameObject* parent);
+	CGameOver(aqua::IGameObject* parent);
 
 	//デストラクタ
-	~COver() = default;
+	~CGameOver() = default;
 
 	//初期化
 	void Initialize(void)override;
@@ -23,12 +23,12 @@ public:
 	//解放
 	void Finalize(void)override;
 private:
-	static const int m_width;		//幅
-	static const int m_height;		//高さ
+	static const int m_width;		//2種類のボタンの幅
+	static const int m_height;		//2種類のボタンの高さ
 
-	aqua::CLabel	m_Over;			//ゲームオーバーラベル
+	aqua::CLabel	m_GameOver;			//ゲームオーバーラベル
 	aqua::CLabel	m_Message;		//メッセージラベル
 	aqua::CSprite	m_Button;		//ボタンスプライト
 	aqua::CSprite	m_ButtonBlack;	//ボタン（発光）スプライト
-	aqua::CSprite	m_BackGround;	//背景
+	aqua::CSprite	m_BackGround;	//背景スプライト
 };

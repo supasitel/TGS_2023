@@ -17,10 +17,13 @@ void CStartMessage::Initialize(void)
 {
 	//スタートメッセージ
 	m_StartMessage.Create("data\\start.png");
+	//スタートメッセージの位置
 	m_StartMessage.position.x = (float)aqua::GetWindowWidth() / 2.0f - (float)m_StartMessage.GetTextureWidth() / 2.0f;
 	m_StartMessage.position.y = (float)aqua::GetWindowHeight() / 2.0f - (float)m_StartMessage.GetTextureHeight() / 2.0f;
+	//スタートメッセージの拡縮・回転の基準点
 	m_StartMessage.anchor.x = (float)m_StartMessage.GetTextureWidth() / 2.0f;
 	m_StartMessage.anchor.y = (float)m_StartMessage.GetTextureHeight() / 2.0f;
+	//スタートメッセージの拡大率
 	m_StartMessage.scale = aqua::CVector2::ZERO;
 }
 
@@ -50,11 +53,13 @@ void CStartMessage::Update(void)
 //描画
 void CStartMessage::Draw(void)
 {
+	//スタートメッセージの描画
 	m_StartMessage.Draw();
 }
 
 //解放
 void CStartMessage::Finalize(void)
 {
+	//スタートメッセージの解放
 	m_StartMessage.Delete();
 }

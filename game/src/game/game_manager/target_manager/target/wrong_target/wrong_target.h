@@ -31,7 +31,7 @@ private:
 	static const float m_max_speed;			//最高速度
 	static const float m_min_speed;			//最低速度
 
-	int		m_WrongTarget_Count;			//不正解ターゲットの数
+	//int		m_WrongTarget_Count;			//不正解ターゲットの数
 	float   m_Width;						//幅
 	float	m_Height;						//高さ
 	float   m_Speed;						//速度

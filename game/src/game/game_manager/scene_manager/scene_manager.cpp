@@ -122,6 +122,7 @@ void CSceneManager::Reset(void)
 //生成
 void CSceneManager::Create(SCENE_ID id)
 {
+	//シーンにnullptrを代入
 	IScene* scene = nullptr;
 
 	// idごとに新しくシーンを生成
@@ -131,12 +132,14 @@ void CSceneManager::Create(SCENE_ID id)
 	case SCENE_ID::EXPLANATION: scene = aqua::CreateGameObject<CExplanationScene>(this); break;
 	case SCENE_ID::MAIN:		scene = aqua::CreateGameObject<CMainScene>(this); break;
 	case SCENE_ID::CLEAR:		scene = aqua::CreateGameObject<CClearScene>(this); break;
-	case SCENE_ID::OVER:		scene = aqua::CreateGameObject<COver>(this); break;
+	case SCENE_ID::OVER:		scene = aqua::CreateGameObject<CGameOver>(this); break;
 	}
 
 	AQUA_ASSERT(scene, "シーンが生成できませんでした。");
 
+	//sceneの初期化を呼ぶ
 	scene->Initialize();
+	//sceneの更新を呼ぶ
 	scene->Update();
 }
 

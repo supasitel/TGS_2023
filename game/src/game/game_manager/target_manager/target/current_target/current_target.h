@@ -29,8 +29,8 @@ private:
 	static const float m_one_timer;			//１秒
 	static const float m_max_speed;			//最高速度
 	static const float m_min_speed;			//最低速度
-	static const int   m_width;
-	static const int   m_height;
+	static const int   m_width;				//幅
+	static const int   m_height;			//高さ
 
 	int		m_CurrentTarget_Count;	//正解ターゲットの数
 	float   m_Width;				//幅

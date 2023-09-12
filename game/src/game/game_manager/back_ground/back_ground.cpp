@@ -11,17 +11,20 @@ void CBackGround::Initialize(void)
 {
 	//”wŒi
 	m_BackGround.Create("data\\main_ground.png");
+	//”wŒi‚ÌˆÊ’u
 	m_BackGround.position = aqua::CVector2::ZERO;
 }
 
 //•`‰æ
 void CBackGround::Draw(void)
 {
+	//”wŒi‚Ì•`‰æ
 	m_BackGround.Draw();
 }
 
 //‰ð•ú
 void CBackGround::Finalize(void)
 {
+	//”wŒi‚Ì‰ð•ú
 	m_BackGround.Delete();
 }

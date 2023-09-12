@@ -23,8 +23,8 @@ public:
 	//解放
 	void Finalize(void)override;
 private:
-	static const int m_width;		//幅
-	static const int m_height;		//高さ
+	static const int m_width;		//2種類のボタンの幅
+	static const int m_height;		//2種類のボタンの高さ
 
 	aqua::CLabel	m_Clear;		//クリアメッセージ
 	aqua::CLabel	m_Message;		//メッセージ
