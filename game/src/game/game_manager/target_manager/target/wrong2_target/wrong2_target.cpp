@@ -94,6 +94,7 @@ void CWrong2::Finalize(void)
 
 void CWrong2::CheckHitMouse(void)
 {
+	//aqua::mouseの省略
 	using namespace aqua::mouse;
 
 	//左クリックしたらターゲットクリック時のサウンドを再生
@@ -104,7 +105,7 @@ void CWrong2::CheckHitMouse(void)
 		if (sound)sound->Play(SOUND_ID::TCLICK);
 	}
 
-	aqua::CPoint p = GetCursorPos();
+	aqua::CPoint p= GetCursorPos();
 
 	aqua::CVector2 mpos = aqua::CVector2((float)p.x, (float)p.y);
 

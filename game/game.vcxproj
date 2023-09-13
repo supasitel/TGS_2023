@@ -112,6 +112,7 @@
     <ClCompile Include="src\game\game_manager\sound_manager\sound_manager.cpp" />
     <ClCompile Include="src\game\game_manager\target_manager\target\current_target\current_target.cpp" />
     <ClCompile Include="src\game\game_manager\target_manager\target\wrong2_target\wrong2_target.cpp" />
+    <ClCompile Include="src\game\game_manager\target_manager\target\wrong3_target\wrong3_target.cpp" />
     <ClCompile Include="src\game\game_manager\target_manager\target\wrong_target\wrong_target.cpp" />
     <ClCompile Include="src\game\game_manager\ui_manager\ui_manager.cpp" />
     <ClCompile Include="src\game\game_manager\ui_manager\time\time.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="src\game\game_manager\sound_manager\sound_manager.h" />
     <ClInclude Include="src\game\game_manager\target_manager\target\current_target\current_target.h" />
     <ClInclude Include="src\game\game_manager\target_manager\target\wrong2_target\wrong2_target.h" />
+    <ClInclude Include="src\game\game_manager\target_manager\target\wrong3_target\wrong3_target.h" />
     <ClInclude Include="src\game\game_manager\target_manager\target\wrong_target\wrong_target.h" />
     <ClInclude Include="src\game\game_manager\ui_manager\ui_manager.h" />
     <ClInclude Include="src\game\game_manager\ui_manager\time\time.h" />
