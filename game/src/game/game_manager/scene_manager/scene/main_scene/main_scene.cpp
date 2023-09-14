@@ -20,10 +20,11 @@ void CMainScene::Initialize(void)
 	time->SetGameObjectState(aqua::GAME_OBJECT_STATE::WAIT);
 
 	//不正解ターゲットを生成
-	for (int i = 0; i < 1; ++i)
+	for (int i = 0; i < 20; ++i)
 	{
 		(CWrongTarget*)aqua::CreateGameObject<CWrongTarget>(this);
 		(CWrong2*)aqua::CreateGameObject<CWrong2>(this);
+		(CWrong3*)aqua::CreateGameObject<CWrong3>(this);
 	}
 	
 	//正解ターゲットのゲームオブジェクト生成
@@ -43,6 +44,8 @@ void CMainScene::Update(void)
 	{
 		CTime*time=(CTime*)aqua::FindGameObject("Time");
 		time->SetGameObjectState(aqua::GAME_OBJECT_STATE::ACTIVE);
+
 	}
+
 	IGameObject::Update();
 }

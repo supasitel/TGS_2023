@@ -1,7 +1,7 @@
 #include "time.h"
 #include "../../message/finish_message/finish_message.h"
 
-const int	CTime::m_default_time_limit = 45;	//制限時間
+const int	CTime::m_default_time_limit = 30;	//制限時間
 const float CTime::m_one_timer = 1.0f;//1秒
 
 //コンストラクタ
@@ -14,7 +14,7 @@ CTime::CTime(aqua::IGameObject* parent)
 void CTime::Initialize(void)
 {
 	//テキストの生成
-	m_TimerLabel.Create(40, 2);
+	m_TimerLabel.Create(45, 2);
 
 	//1秒タイマーをセット
 	m_OneTimer.Setup(m_one_timer);
@@ -60,7 +60,7 @@ void CTime::Draw(void)
 	m_TimerLabel.text = "残り" + std::to_string(m_TimeLimit) + "秒";
 
 	//たーまーテキストの位置
-	m_TimerLabel.position = { 800.0f,0.0f };
+	m_TimerLabel.position = { 600.0f,0.0f };
 
 	m_TimerLabel.Draw();
 }

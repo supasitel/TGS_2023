@@ -1,5 +1,6 @@
 #include "wrong3_target.h"
 #include "../../../sound_manager/sound_manager.h"
+#include "../../../ui_manager/time/time.h"
 
 const std::string CWrong3::m_name = "Wrong3";
 const std::string CWrong3::m_category = "Wrong3Target";
@@ -82,11 +83,13 @@ void CWrong3::Update(void)
 //•`‰æ
 void CWrong3::Draw(void)
 {
+	m_Wrong3.Draw();
 }
 
 //‰ð•ú
 void CWrong3::Finalize(void)
 {
+	m_Wrong3.Delete();
 }
 
 //ƒ}ƒEƒX”»’è
